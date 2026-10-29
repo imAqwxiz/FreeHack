@@ -1,2 +1,2 @@
-# HoldToSpam
-A simple mod that spams for you when you hold.
+# Free Hack
+A free QoL menu for Geode.
