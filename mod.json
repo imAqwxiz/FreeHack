@@ -1,0 +1,74 @@
+
+{
+    "geode": "5.10.1",
+    "gd": {
+        "android": "*"
+    },
+    "id": "aqwxiz.holdtospam",
+    "name": "HoldToSpam",
+    "version": "v0.3.0",
+    "developer": "aqwxiz",
+    "description": "Customizable hold-triggered gameplay input settings for Geometry Dash.",
+    "dependencies": {
+        "geode.node-ids": ">=v1.23.3"
+    },
+    "settings": {
+        "general-title": {
+            "type": "title",
+            "name": "General"
+        },
+        "hold-duration": {
+            "type": "float",
+            "name": "Hold Duration",
+            "description": "Seconds to hold before spam activates.",
+            "default": 15.0,
+            "min": 1.0,
+            "max": 60.0,
+            "control": {
+                "slider": true,
+                "input": true,
+                "slider-step": 0.5
+            }
+        },
+        "cps": {
+            "type": "int",
+            "name": "Spam CPS",
+            "description": "Target number of complete press/release cycles per second.",
+            "default": 10,
+            "min": 1,
+            "max": 60,
+            "control": {
+                "slider": true,
+                "input": true
+            }
+        },
+        "wave-title": {
+            "type": "title",
+            "name": "Wave Spam"
+        },
+        "frame-perfect-wave-spam": {
+            "type": "string",
+            "name": "Frame Perfect Wave Spam",
+            "description": "Frame-perfect timing preference. Behavior will be implemented separately.",
+            "default": "Mostly",
+            "one-of": [
+                "Mostly",
+                "Always",
+                "Never"
+            ]
+        },
+        "spam-accuracy": {
+            "type": "int",
+            "name": "Spam Accuracy",
+            "description": "99 means minimal timing variation. Timing variation is not implemented yet.",
+            "default": 99,
+            "min": 1,
+            "max": 99,
+            "control": {
+                "slider": true,
+                "input": true
+            }
+        }
+    }
+}
+
