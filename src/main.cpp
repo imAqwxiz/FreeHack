@@ -44,14 +44,15 @@ namespace fh {
 }
 
 // ---------- the menu popup ----------
-class FreeHackPopup : public Popup<> {
+class FreeHackPopup : public Popup {
 protected:
     int m_tab = 0;
     CCNode* m_content = nullptr;
     CCLabelBMFont* m_speedLabel = nullptr;
     std::vector<CCMenuItemSpriteExtra*> m_tabBtns;
 
-    bool setup() override {
+    bool init() {
+        if (!Popup::init(380.f, 240.f)) return false;
         this->setTitle("FreeHack");
 
         auto size = m_mainLayer->getContentSize();
@@ -172,7 +173,7 @@ protected:
 public:
     static FreeHackPopup* create() {
         auto ret = new FreeHackPopup();
-        if (ret->initAnchored(380.f, 240.f)) {
+        if (ret->init()) {
             ret->autorelease();
             return ret;
         }
@@ -247,4 +248,3 @@ class $modify(FHPlayLayer, PlayLayer) {
         PlayLayer::onQuit();
     }
 };
-
