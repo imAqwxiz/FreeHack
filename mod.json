@@ -1,6 +1,11 @@
 {
 	"geode": "5.10.1",
-	"gd": "*",
+	"gd": {
+		"win": "*",
+		"android": "*",
+		"mac": "*",
+		"ios": "*"
+	},
 	"id": "aqwxiz.freehack",
 	"name": "FreeHack",
 	"version": "v0.1.0",
